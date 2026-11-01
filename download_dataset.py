@@ -12,9 +12,9 @@ def main() -> None:
         raise RuntimeError("Set ROBOFLOW_API_KEY before downloading the dataset")
     dataset = (
         Roboflow(api_key=api_key)
-        .workspace("roboflow-universe-projects")
-        .project("banana-ripeness-classification")
-        .version(4)
+        .workspace("mpwillia90")
+        .project("banana-ripeness-6jjwh")
+        .version(1)
         .download("folder", location=str(Path("roboflow")))
     )
     print(f"Dataset downloaded to {dataset.location}")
