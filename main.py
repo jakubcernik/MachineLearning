@@ -1,9 +1,13 @@
-"""Minimal runnable entrypoint for the repository."""
+"""Download dataset."""
+import kagglehub
 
 
-def main() -> None:
-    print("MachineLearning project is set up and runnable.")
+def download() -> None:
+    # Download latest version
+    path = kagglehub.dataset_download("shahriar26s/banana-ripeness-classification-dataset")
+
+    print("Path to dataset files:", path)
 
 
 if __name__ == "__main__":
-    main()
+    download()
